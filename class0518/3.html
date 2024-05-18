@@ -41,11 +41,11 @@
             },
             parse(){
                 console.log('QQQQQQQ')
-                return this.price*this.res;
+                return this.price*this.res; //不太正常的寫法
             },
-            parseDollar(){
+            parse(){
                 console.log('RRRR')
-                return this.dollar*this.price*this.res;
+                return this.dollar*this.price*this.res;//不太正常的寫法
             }
         },
     }).mount("#app")        
