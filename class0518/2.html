@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        function add(num1, num2){
+            return num1 + num2;
+        }
+        const res = add(1000,1); // let res = add(1000,1)    建議宣告變數用let或是const，不要用var
+        console.log(res);
+
+        const addRes = (num1,num2)=>{
+            return parseInt(num1)+ parseInt(num2);
+            // console.log('QQQQ'); 放在return後就不會在往下跑啦
+        }
+        console.log(addRes(200.,3));
+
+        const bloodType=(Reika, B) =>{
+            const bloodType = (name, blood) => `我是${name}，血型是${blood}`
+
+        }
+
+
+
+    </script>
+</body>
+</html>
