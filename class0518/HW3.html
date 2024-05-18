@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 2rem;
+            height: 2rem;
+            background-color: #ddd;
+        }
+        .color1{
+        background-color: red;
+        }
+        .color2{
+            background-color: orange;
+        }
+        .color3{
+            background-color: yellow;
+        }
+        .color4{
+            background-color: green;
+        }
+        .color5{
+            background-color: blue;
+        }
+        .color6{
+            background-color: #6f00ff;
+        }
+        .color7{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{tab}}
+        <button @click="changeColor">換色</button>
+        <div class="box" :class="'color'+count" ></div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+    Vue.createApp({
+        data(){
+            return{
+                // color: 0,
+                count:1
+            }
+        },
+        methods: {
+            changeColor(){
+                this.count = this.count % 7 + 1 ;
+            }
+        },
+    }).mount("#app")        
+    </script>
+</body>
+</html>

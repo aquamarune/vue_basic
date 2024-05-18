@@ -7,9 +7,9 @@
 </head>
 <body>
     <div id="app">
-        <button @click="reduce">-</button>
+        <button @click='reduce'>-</button>
         {{res}}
-        <button @click="add">+</button>
+        <button @click='add'>+</button>
         <br>
         總價：{{parse()}}
         美金：{{parseDollar()}}
@@ -43,7 +43,7 @@
                 console.log('QQQQQQQ')
                 return this.price*this.res; //不太正常的寫法
             },
-            parse(){
+            parseDollar(){
                 console.log('RRRR')
                 return this.dollar*this.price*this.res;//不太正常的寫法
             }
