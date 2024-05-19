@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test0508</title>
+</head>
+<body>
+    <div id="app">
+        <p>嗨嗨~~~{{name}}要去聽{{music[0]}}</p>
+        <p>{{name}}會用{{skill["f2e"][0]}}</p>
+        <p>{{live? "活著": "掛掉了"}}</p>
+        <p v-text="`${age}歲`"></p>
+        <h6 v-html="content"></h6>
+        
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+
+
+    <script>
+        // debugger
+        // console.log(Vue)
+        
+        const app = Vue.createApp({
+            data(){
+                return{
+                skill:{
+                    f2e:['vue', 'react'],
+                    b2e: ['php', 'node.js', 'ASP.net']},
+                    name: 'Reika',
+                    age:28,
+                    content: `<div style = "color: red;font-size: 36px;">下一話換你打宿儺<br></div>`,
+                    live: false,
+                    music: ['SID','HypnosisMic'],
+                    
+                }
+            },
+            gender: null
+        })
+        app.mount('#app')
+    </script>
+</body>
+</html>
